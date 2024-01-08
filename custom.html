@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Property</title>
+    <style>
+        :root {
+            --main-text-color--: red;
+            --footer-border--: 2px solid cyan;
+        }
+
+        h1 {
+            color: var(--main-text-color--);
+        }
+
+        h2 {
+            border: 2px solid blueviolet;
+            color: var(--main-text-color--);
+        }
+
+        h6 {
+            background-color: blueviolet;
+        }
+
+        p {
+            color: var(--main-text-color--);
+        }
+
+        footer {
+            clear: both;
+            border: var(--footer-border--);
+            color: var(--main-text-color--);
+        }
+
+        .side-nav,
+        .blogs {
+            float: left;
+            height: 300px;
+        }
+
+        aside {
+            background-color: cornflowerblue;
+            width: 300px;
+        }
+
+        .blogs {
+            background-color: coral;
+            width: calc(100% - 2*300px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>I am exploring Custom Properties</h1>
+        <p>Welcome To My Website</p>
+    </header>
+    <main>
+        <h2>My Awesome Content</h2>
+        <h6>My Tiny Heading</h6>
+        <section>
+            <aside class="side-nav">
+                my side navigation
+            </aside>
+            <div class="blogs">
+                <h4>Blog</h4>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><small>Copyright 2020</small></p>
+    </footer>
+</body>
+
+</html>
